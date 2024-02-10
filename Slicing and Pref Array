@@ -1,0 +1,13 @@
+Tricks for slicing and making pref array
+
+Prefix array
+pref = [0]
+for i in range(n):
+    pref.append(pref[-1] + arr[i])
+
+if we do pref[r+1]-pref[l] > k:
+this means we are including both r and l elements
+pref[r+1] - pref[l] == sum(arr[l:r+1])
+
+Slicing Array
+if we write arr[l:r] then we are including lth element but not rth element. So if we need to include both the elements, we will write arr[l:r+1].
